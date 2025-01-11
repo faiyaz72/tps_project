@@ -1,0 +1,76 @@
+"features": [
+    {
+        "attributes": {
+            "OBJECTID": 1,
+            "EVENT_UNIQUE_ID": "GO-20141261609",
+            "REPORT_DATE": 1388552400000,
+            "OCC_DATE": 1388552400000,
+            "REPORT_YEAR": "2014",
+            "REPORT_MONTH": "January",
+            "REPORT_DAY": "1",
+            "REPORT_DOY": "1",
+            "REPORT_DOW": "Wednesday ",
+            "REPORT_HOUR": "9",
+            "OCC_YEAR": "2014",
+            "OCC_MONTH": "January",
+            "OCC_DAY": "1",
+            "OCC_DOY": "1",
+            "OCC_DOW": "Wednesday ",
+            "OCC_HOUR": "9",
+            "DIVISION": "D55",
+            "LOCATION_TYPE": "Apartment (Rooming House, Condo)",
+            "PREMISES_TYPE": "Apartment",
+            "UCR_CODE": "1430",
+            "UCR_EXT": "100",
+            "OFFENCE": "Assault",
+            "MCI_CATEGORY": "Assault",
+            "HOOD_158": "069",
+            "NEIGHBOURHOOD_158": "Blake-Jones (69)",
+            "HOOD_140": "069",
+            "NEIGHBOURHOOD_140": "Blake-Jones (69)",
+            "LONG_WGS84": -79.3381385059127,
+            "LAT_WGS84": 43.675140468804884
+        },
+        "geometry": {
+            "x": -79.33813850599995,
+            "y": 43.675140469000034
+        }
+    },
+    {
+        "attributes": {
+            "OBJECTID": 2,
+            "EVENT_UNIQUE_ID": "GO-20141260033",
+            "REPORT_DATE": 1388552400000,
+            "OCC_DATE": 1388466000000,
+            "REPORT_YEAR": "2014",
+            "REPORT_MONTH": "January",
+            "REPORT_DAY": "1",
+            "REPORT_DOY": "1",
+            "REPORT_DOW": "Wednesday ",
+            "REPORT_HOUR": "2",
+            "OCC_YEAR": "2013",
+            "OCC_MONTH": "December",
+            "OCC_DAY": "31",
+            "OCC_DOY": "365",
+            "OCC_DOW": "Tuesday   ",
+            "OCC_HOUR": "22",
+            "DIVISION": "D42",
+            "LOCATION_TYPE": "Single Home, House (Attach Garage, Cottage, Mobile)",
+            "PREMISES_TYPE": "House",
+            "UCR_CODE": "1430",
+            "UCR_EXT": "100",
+            "OFFENCE": "Assault",
+            "MCI_CATEGORY": "Assault",
+            "HOOD_158": "144",
+            "NEIGHBOURHOOD_158": "Morningside Heights (144)",
+            "HOOD_140": "131",
+            "NEIGHBOURHOOD_140": "Rouge (131)",
+            "LONG_WGS84": -79.18038688919033,
+            "LAT_WGS84": 43.806289390842466
+        },
+        "geometry": {
+            "x": -79.18038688899998,
+            "y": 43.80628939100006
+        }
+    }
+]

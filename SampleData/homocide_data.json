@@ -1,0 +1,74 @@
+"features": [
+   {
+      "attributes": {
+         "OBJECTID": 1,
+         "EVENT_UNIQUE_ID": "GO-2004111878",
+         "OCC_DATE": 1073106000000,
+         "OCC_YEAR": "2004",
+         "OCC_MONTH": "January",
+         "OCC_DAY": "3",
+         "OCC_DOW": "Saturday",
+         "OCC_DOY": "3",
+         "DIVISION": "D53",
+         "HOMICIDE_TYPE": "Other",
+         "HOOD_158": "098",
+         "NEIGHBOURHOOD_158": "Rosedale-Moore Park (98)",
+         "HOOD_140": "098",
+         "NEIGHBOURHOOD_140": "Rosedale-Moore Park (98)",
+         "LONG_WGS84": -79.39282836088456,
+         "LAT_WGS84": 43.68502644145238
+      },
+      "geometry": {
+         "x": -79.39282836099994,
+         "y": 43.68502644100005
+      }
+   },
+   {
+      "attributes": {
+         "OBJECTID": 2,
+         "EVENT_UNIQUE_ID": "GO-2004125755",
+         "OCC_DATE": 1073538000000,
+         "OCC_YEAR": "2004",
+         "OCC_MONTH": "January",
+         "OCC_DAY": "8",
+         "OCC_DOW": "Thursday",
+         "OCC_DOY": "8",
+         "DIVISION": "D42",
+         "HOMICIDE_TYPE": "Shooting",
+         "HOOD_158": "142",
+         "NEIGHBOURHOOD_158": "Woburn North (142)",
+         "HOOD_140": "137",
+         "NEIGHBOURHOOD_140": "Woburn (137)",
+         "LONG_WGS84": -79.2338520249659,
+         "LAT_WGS84": 43.78178169646291
+      },
+      "geometry": {
+         "x": -79.23385202499998,
+         "y": 43.781781696000046
+      }
+   },
+   {
+      "attributes": {
+         "OBJECTID": 3,
+         "EVENT_UNIQUE_ID": "GO-2004136086",
+         "OCC_DATE": 1073538000000,
+         "OCC_YEAR": "2004",
+         "OCC_MONTH": "January",
+         "OCC_DAY": "8",
+         "OCC_DOW": "Thursday",
+         "OCC_DOY": "8",
+         "DIVISION": "D42",
+         "HOMICIDE_TYPE": "Shooting",
+         "HOOD_158": "146",
+         "NEIGHBOURHOOD_158": "Malvern East (146)",
+         "HOOD_140": "132",
+         "NEIGHBOURHOOD_140": "Malvern (132)",
+         "LONG_WGS84": -79.20557418363322,
+         "LAT_WGS84": 43.810544206016885
+      },
+      "geometry": {
+         "x": -79.20557418399996,
+         "y": 43.81054420600003
+      }
+   }
+]
