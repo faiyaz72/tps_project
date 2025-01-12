@@ -1,7 +1,9 @@
 import express from 'express';
 // import connectDB from './utils/db';
-import crimeRoutes from './routes/crimeRoutes.js';
+import queryRoutes from './routes/queryRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 import config from './config/config.js';
+import authMiddleware from './middlewares/authMiddleware.js';
 
 const app = express();
 
@@ -12,7 +14,8 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api', crimeRoutes);
+app.use('/auth', authRoutes);
+app.use('/query', authMiddleware, queryRoutes);
 
 const PORT = config.port;
 app.listen(PORT, () => {
