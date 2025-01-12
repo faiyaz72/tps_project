@@ -1,7 +1,7 @@
-const express = require('express');
-// const connectDB = require('./utils/db');
-// const crimeRoutes = require('./routes/crimeRoutes');
-const config = require('./config/config');
+import express from 'express';
+// import connectDB from './utils/db';
+// import crimeRoutes from './routes/crimeRoutes';
+import config from './config/config.js';
 
 const app = express();
 
