@@ -1,5 +1,5 @@
 import express from 'express';
-// import connectDB from './utils/db';
+import { connectDb } from './service/utils/db.js';
 import queryRoutes from './routes/queryRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import config from './config/config.js';
@@ -8,7 +8,7 @@ import authMiddleware from './middlewares/authMiddleware.js';
 const app = express();
 
 // Connect to database
-// connectDB();
+connectDb();
 
 // Middleware
 app.use(express.json());
