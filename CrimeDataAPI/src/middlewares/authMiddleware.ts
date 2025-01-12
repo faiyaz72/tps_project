@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
-import config from '../config/config.js';
+import config from '../config/config';
 
-const authMiddleware = (req, res, next) => {
+const authMiddleware = (req: any, res: any, next: any) => {
     const token = req.header('Authorization');
     if (!token) return res.status(401).json({ message: 'Access denied' });
 

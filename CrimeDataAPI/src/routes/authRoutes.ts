@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import jwt from 'jsonwebtoken';
-import config from '../config/config.js';
+import config from '../config/config';
 
 router.get('/login', (req, res) => {
     const user = {

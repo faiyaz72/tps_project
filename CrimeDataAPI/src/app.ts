@@ -1,9 +1,9 @@
 import express from 'express';
-import { connectDb } from './service/utils/db.js';
-import queryRoutes from './routes/queryRoutes.js';
-import authRoutes from './routes/authRoutes.js';
-import config from './config/config.js';
-import authMiddleware from './middlewares/authMiddleware.js';
+import { connectDb } from './service/utils/db';
+import queryRoutes from './routes/queryRoutes';
+import authRoutes from './routes/authRoutes';
+import config from './config/config';
+import authMiddleware from './middlewares/authMiddleware';
 
 const app = express();
 

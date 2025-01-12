@@ -1,6 +1,6 @@
 // connect to a postgres database
 import pg from 'pg';
-import config from '../../config/config.js';
+import config from '../../config/config';
 
 const pool = new pg.Pool({
     connectionString: config.dbUri
@@ -16,7 +16,7 @@ const connectDb = async () => {
     }
 };
 
-const performQuery = async (query, params) => {
+const performQuery = async (query: any, params?: any) => {
     const client = await pool.connect();
     try {
         const res = await client.query(query, params);
