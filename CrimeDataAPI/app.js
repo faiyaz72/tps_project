@@ -1,6 +1,6 @@
 import express from 'express';
 // import connectDB from './utils/db';
-// import crimeRoutes from './routes/crimeRoutes';
+import crimeRoutes from './routes/crimeRoutes.js';
 import config from './config/config.js';
 
 const app = express();
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-// app.use('/api', crimeRoutes);
+app.use('/api', crimeRoutes);
 
 const PORT = config.port;
 app.listen(PORT, () => {
