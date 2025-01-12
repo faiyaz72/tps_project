@@ -30,7 +30,7 @@
 
 #### Technologies
 - Node.js with Express
-- MongoDB or PostgreSQL
+- PostgreSQL
 - JWT for authentication
 - Swagger for API documentation
 
