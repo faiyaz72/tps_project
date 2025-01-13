@@ -21,7 +21,8 @@
       "restart": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "preLaunchTask": "tsc: build - tsconfig.json",
+      "args": ["--exec", "ts-node -r tsconfig-paths/register"],
+      "envFile": "${workspaceFolder}/.env",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "sourceMaps": true
     }
