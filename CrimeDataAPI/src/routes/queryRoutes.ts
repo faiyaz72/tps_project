@@ -4,8 +4,6 @@ const router = express.Router();
 
 router.get('/basic', queryController.getSampleData);
 
-router.get('/basic/:id', (req, res) => {
-    res.json({ message: 'Query by ID endpoint' });
-});
+router.get('/between', queryController.getCrimesBetweenDates);
 
 export default router;
