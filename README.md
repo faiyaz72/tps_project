@@ -32,7 +32,7 @@
 - Node.js with Express
 - PostgreSQL
 - JWT for authentication
-- Swagger for API documentation
+- Swagger for API documentation (runs on <server>/api-docs
 
 ---
 
