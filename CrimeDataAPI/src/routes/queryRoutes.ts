@@ -8,6 +8,8 @@ const router = express.Router();
  *   get:
  *     summary: Get Sample Data
  *     description: Fetches the first ten major crimes from the database.
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: A JSON array of the first ten major crimes.
@@ -26,6 +28,8 @@ router.get("/basic", queryController.getSampleData);
  *   get:
  *     summary: Get Crimes Between Dates
  *     description: Fetches major crimes that occurred between the specified start and end dates, with pagination support.
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: query
  *         name: startDate
