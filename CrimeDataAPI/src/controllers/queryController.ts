@@ -1,6 +1,7 @@
 import fetchFirstTenMajorCrimes from "../queries/queryCrimes";
+import { Request, Response } from 'express';
 
-const getSampleData = async (req: any, res: any) => {
+const getSampleData = async (req: Request, res: Response) => {
     try {
         const data = await fetchFirstTenMajorCrimes();
         res.json(data);

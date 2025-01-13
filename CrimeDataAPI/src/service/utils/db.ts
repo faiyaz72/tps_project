@@ -16,7 +16,7 @@ const connectDb = async () => {
     }
 };
 
-const performQuery = async (query: any, params?: any) => {
+const performQuery = async (query: string, params?: any) => {
     const client = await pool.connect();
     try {
         const res = await client.query(query, params);
