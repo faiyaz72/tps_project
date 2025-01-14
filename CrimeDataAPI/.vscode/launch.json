@@ -23,7 +23,6 @@
       "internalConsoleOptions": "neverOpen",
       "args": ["--exec", "ts-node -r tsconfig-paths/register"],
       "envFile": "${workspaceFolder}/.env",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "sourceMaps": true
     }
   ]
