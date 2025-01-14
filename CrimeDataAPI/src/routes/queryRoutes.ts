@@ -52,13 +52,6 @@ router.get("/basic", queryController.getSampleData);
  *           default: 1
  *         required: false
  *         description: The page number for pagination.
- *       - in: query
- *         name: pageSize
- *         schema:
- *           type: integer
- *           default: 10
- *         required: false
- *         description: The number of records per page.
  *     responses:
  *       200:
  *         description: A JSON array of major crimes between the specified dates.
