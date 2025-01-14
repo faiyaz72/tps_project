@@ -60,7 +60,7 @@ router.get("/basic", queryController.getSampleData);
  *             schema:
  *               type: array
  *               items:
- *                 type: object
+ *                 $ref: '#/components/schemas/CrimeModel'
  *       400:
  *         description: Missing required query parameters.
  *         content:
@@ -83,5 +83,67 @@ router.get("/basic", queryController.getSampleData);
  *                   example: Failed to fetch crimes between dates
  */
 router.get("/between", queryController.getCrimesBetweenDates);
+
+// Add the CrimeModel schema definition to your Swagger components
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CrimeModel:
+ *       type: object
+ *       properties:
+ *         eventUniqueId:
+ *           type: string
+ *         reportDate:
+ *           type: string
+ *         occDate:
+ *           type: string
+ *         reportYear:
+ *           type: number
+ *         reportMonth:
+ *           type: string
+ *         reportDay:
+ *           type: number
+ *         reportDoy:
+ *           type: number
+ *         reportDow:
+ *           type: string
+ *         reportHour:
+ *           type: number
+ *         occYear:
+ *           type: number
+ *         occMonth:
+ *           type: string
+ *         occDay:
+ *           type: number
+ *         occDoy:
+ *           type: number
+ *         occDow:
+ *           type: string
+ *         occHour:
+ *           type: number
+ *         division:
+ *           type: string
+ *         locationType:
+ *           type: string
+ *         premisesType:
+ *           type: string
+ *         offence:
+ *           type: string
+ *         mciCategory:
+ *           type: string
+ *         neighbourhood158:
+ *           type: string
+ *         neighbourhood140:
+ *           type: string
+ *         longWgs84:
+ *           type: number
+ *         latWgs84:
+ *           type: number
+ *         x:
+ *           type: number
+ *         y:
+ *           type: number
+ */
 
 export default router;

@@ -1,4 +1,7 @@
+import { CrimeModel } from "../models/CrimeModel";
+import { CrimeModelVo } from "../models/CrimeModelVo";
 import { performQuery } from "../service/utils/db";
+import * as crimeModelConverter from "../converter/crimeModelConverter";
 
 const SCHEMA = "tps";
 const TABLE = "major_crime_t";
@@ -24,8 +27,12 @@ const fetchMajorCrimesBetweenDates = async (
   const offset = (page - 1) * pageSize;
   const params = [startDate, endDate, pageSize, offset];
   try {
-    const result = await performQuery(query, params);
-    return result;
+    const crimeListVo: CrimeModelVo[] = await performQuery(query, params);
+    let crimeModelList: CrimeModel[] = [];
+    crimeModelList = crimeListVo.map((crimeVo) =>
+      crimeModelConverter.convertCrimeVoToModel(crimeVo)
+    );
+    return crimeModelList;
   } catch (err) {
     console.error("Error executing query", err);
     throw err;
