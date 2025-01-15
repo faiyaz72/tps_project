@@ -5,6 +5,7 @@ import authRoutes from "./routes/authRoutes";
 import config from "./config/config";
 import authMiddleware from "./middlewares/authMiddleware";
 import setupSwagger from "./swaggerConfig";
+import logger from "./middlewares/logger";
 
 const app = express();
 
@@ -15,8 +16,8 @@ connectDb();
 app.use(express.json());
 
 // Routes
-app.use("/auth", authRoutes);
-app.use("/query", authMiddleware, queryRoutes);
+app.use("/auth", logger, authRoutes);
+app.use("/query", [authMiddleware, logger], queryRoutes);
 
 // Setup Swagger
 setupSwagger(app);

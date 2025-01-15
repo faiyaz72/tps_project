@@ -26,7 +26,7 @@ router.get("/login", (req, res) => {
     id: 1,
     username: "test",
   };
-  const token = jwt.sign(user, config.jwtSecret, { expiresIn: "1h" });
+  const token = jwt.sign(user, config.jwtSecret, { expiresIn: "1d" });
   res.json({ token });
 });
 

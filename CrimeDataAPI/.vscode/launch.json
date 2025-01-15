@@ -4,26 +4,14 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/app.ts",
-      "envFile": "${workspaceFolder}/.env",
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-      "sourceMaps": true
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "Launch Program with Nodemon",
       "runtimeExecutable": "nodemon",
       "program": "${workspaceFolder}/src/app.ts",
       "restart": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "args": ["--exec", "ts-node -r tsconfig-paths/register"],
+      "args": ["--exec", "ts-node src/app.ts"],
       "envFile": "${workspaceFolder}/.env",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "sourceMaps": true
     }
   ]
