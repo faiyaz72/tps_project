@@ -54,23 +54,21 @@ router.get("/basic", queryController.getSampleData);
  *         description: The page number for pagination.
  *     responses:
  *       200:
- *         description: A JSON array of major crimes between the specified dates.
+ *         description: A JSON object containing the total records and an array of major crimes between the specified dates.
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/CrimeModel'
+ *               $ref: '#/components/schemas/ActionResultModel'
  *       400:
  *         description: Missing required query parameters.
  *         content:
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   example: startDate and endDate query parameters are required
+ *               $ref: '#/components/schemas/ActionResultModel'
+ *               example:
+ *                 success: false
+ *                 comment: "Missing required query parameters"
+ *                 errorCode: 400
  *       500:
  *         description: Failed to fetch data due to a server error.
  *         content:
@@ -84,7 +82,7 @@ router.get("/basic", queryController.getSampleData);
  */
 router.get("/between", queryController.getCrimesBetweenDates);
 
-// Add the CrimeModel schema definition to your Swagger components
+// Add the CrimeModel, CrimeQueryResponse, and ActionResultModel schema definitions to your Swagger components
 /**
  * @swagger
  * components:
@@ -98,30 +96,6 @@ router.get("/between", queryController.getCrimesBetweenDates);
  *           type: string
  *         occDate:
  *           type: string
- *         reportYear:
- *           type: number
- *         reportMonth:
- *           type: string
- *         reportDay:
- *           type: number
- *         reportDoy:
- *           type: number
- *         reportDow:
- *           type: string
- *         reportHour:
- *           type: number
- *         occYear:
- *           type: number
- *         occMonth:
- *           type: string
- *         occDay:
- *           type: number
- *         occDoy:
- *           type: number
- *         occDow:
- *           type: string
- *         occHour:
- *           type: number
  *         division:
  *           type: string
  *         locationType:
@@ -140,10 +114,32 @@ router.get("/between", queryController.getCrimesBetweenDates);
  *           type: number
  *         latWgs84:
  *           type: number
- *         x:
- *           type: number
- *         y:
- *           type: number
+ *     CrimeQueryResponse:
+ *       type: object
+ *       properties:
+ *         totalRecords:
+ *           type: integer
+ *         pageSize:
+ *           type: integer
+ *         page:
+ *           type: integer
+ *         totalPages:
+ *           type: integer
+ *         data:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/CrimeModel'
+ *     ActionResultModel:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *         message:
+ *           type: string
+ *         data:
+ *           $ref: '#/components/schemas/CrimeQueryResponse'
+ *         error:
+ *           type: string
+ *           example: startDate and endDate query parameters are required
  */
-
 export default router;
