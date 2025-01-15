@@ -1,4 +1,6 @@
-export interface CrimeModelVo {
+import { PaginatedResponsVo } from "./dbModel";
+
+export interface CrimeModelVo extends PaginatedResponsVo {
   objectid: string;
   event_unique_id: string;
   report_date: string;

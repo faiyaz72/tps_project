@@ -2,18 +2,6 @@ export interface CrimeModel {
   eventUniqueId: string;
   reportDate: string;
   occDate: string;
-  reportYear: number;
-  reportMonth: string;
-  reportDay: number;
-  reportDoy: number;
-  reportDow: string;
-  reportHour: number;
-  occYear: number;
-  occMonth: string;
-  occDay: number;
-  occDoy: number;
-  occDow: string;
-  occHour: number;
   division: string;
   locationType: string;
   premisesType: string;
@@ -23,6 +11,12 @@ export interface CrimeModel {
   neighbourhood140: string;
   longWgs84: number;
   latWgs84: number;
-  x: number;
-  y: number;
+}
+
+export interface CrimeQueryResponse {
+  totalRecords: number;
+  pageSize: number;
+  page: number;
+  totalPages: number;
+  data: CrimeModel[];
 }

@@ -1,7 +1,6 @@
 import * as queryCrimes from "../queries/queryCrimes";
+import * as cm from "../communication/communicationService";
 import { Request, Response } from "express";
-
-const PAGE_SIZE = 10;
 
 const getSampleData = async (req: Request, res: Response) => {
   try {
@@ -20,11 +19,10 @@ const getCrimesBetweenDates = async (req: Request, res: Response) => {
   }
 
   try {
-    const data = await queryCrimes.fetchMajorCrimesBetweenDates(
-      req.query.startDate as string,
-      req.query.endDate as string,
-      parseInt(page as string, 10),
-      PAGE_SIZE
+    const data = await cm.fetchMajorCrimesBetweenDates(
+      startDate as string,
+      endDate as string,
+      parseInt(page as string)
     );
     res.json(data);
   } catch (err) {
