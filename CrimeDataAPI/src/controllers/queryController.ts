@@ -1,4 +1,4 @@
-import * as queryCrimes from "../queries/queryCrimes";
+import * as queryCrimes from "../queries/crimeQuery";
 import * as cm from "../communication/communicationService";
 import { Request, Response } from "express";
 import { ActionResultModel } from "../models/ActionResultModel";

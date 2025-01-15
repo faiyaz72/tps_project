@@ -1,7 +1,7 @@
 import { ActionResultModel } from "../models/ActionResultModel";
 import { CrimeQueryResponse } from "../models/CrimeModel";
 import { CrimeModelVo } from "../models/CrimeModelVo";
-import * as queryCrimes from "../queries/queryCrimes";
+import * as queryCrimes from "../queries/crimeQuery";
 import * as crimeModelConverter from "../converter/crimeModelConverter";
 
 const PAGE_SIZE = 10;
